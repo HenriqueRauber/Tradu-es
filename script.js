@@ -1,4 +1,4 @@
-﻿// JSON embutido com todas as palavras
+// JSON embutido com todas as palavras
 const dados = {
   "palavras": [
     { "de": "Satt", "pt": "Satisfeito" },
@@ -43,11 +43,16 @@ const dados = {
     { "de": "oder", "pt": "ou" },
     { "de": "bitte", "pt": "por favor" },
     { "de": "Kaffe", "pt": "café" },
-    { "de": "Tee", "pt": "chá" }
+    { "de": "Tee", "pt": "chá" },
+    { "de": "schön", "pt": "bonito" },
+    { "de": "groB", "pt": "grande" },
+    { "de": "alt", "pt": "velho, antigo" },
+    { "de": "Stadt", "pt": "cidade" }
+
   ]
 };
 
-
+let qtdeBotoes = 5;
 let palavras = dados.palavras;
 let ladoEsquerdo = "de";
 let ladoDireito = "pt";
@@ -55,15 +60,17 @@ let selecionadaEsquerda = null;
 let acertos = 0, erros = 0;
 let tempoRestante = 60;
 let intervalo = null;
+let selecionados = [];
 
 function iniciarJogo() {
   acertos = 0;
   erros = 0;
   atualizarPontuacao();
   tempoRestante = parseInt(document.getElementById("tempo").value);
+  qtdeBotoes = parseInt(document.getElementById("palavras").value);
   document.getElementById("cronometro").textContent = "Tempo: " + tempoRestante;
 
-  const escolhidas = palavras.sort(() => 0.5 - Math.random()).slice(0, 5);
+  const escolhidas = palavras.sort(() => 0.5 - Math.random()).slice(0, qtdeBotoes);
 
   const esquerdaDiv = document.getElementById("esquerda");
   const direitaDiv = document.getElementById("direita");
@@ -97,31 +104,59 @@ function selecionarEsquerda(botao, palavra) {
 
 function selecionarDireita(botao, palavra) {
   if (!selecionadaEsquerda) return;
-  botao.style.backgroundColor = "lightgreen";
 
   if (palavra === selecionadaEsquerda.palavra) {
+    botao.style.backgroundColor = "lightgreen";
     acertos++;
-    substituirPar(selecionadaEsquerda.botao, botao);
-    embaralharDireita();
-    embaralharEsquerda();
+    //substituirPar(selecionadaEsquerda.botao, botao);
+    //embaralharDireita();
+    //embaralharEsquerda();
   } else {
+    botao.style.backgroundColor = "red";
     erros++;
-    substituirBotao(selecionadaEsquerda.botao, ladoEsquerdo);
-    substituirBotao(botao, ladoDireito);
+    //substituirBotao(selecionadaEsquerda.botao, ladoEsquerdo);
+    //substituirBotao(botao, ladoDireito);
 
-    const corretaDireita = [...document.querySelectorAll("#direita button")]
-      .find(b => JSON.parse(b.dataset.word)[ladoDireito] === selecionadaEsquerda.palavra[ladoDireito]);
-    if (corretaDireita) substituirBotao(corretaDireita, ladoDireito);
-
-    const correspondenteEsq = [...document.querySelectorAll("#esquerda button")]
-      .find(b => JSON.parse(b.dataset.word)[ladoEsquerdo] === palavra[ladoEsquerdo]);
-    if (correspondenteEsq) substituirBotao(correspondenteEsq, ladoEsquerdo);
-
-    embaralharDireita();
-    embaralharEsquerda();
+    //const corretaDireita = [...document.querySelectorAll("#direita button")]
+    //  .find(b => JSON.parse(b.dataset.word)[ladoDireito] === selecionadaEsquerda.palavra[ladoDireito]);
+    //if (corretaDireita) substituirBotao(corretaDireita, ladoDireito);
+    //
+    //const correspondenteEsq = [...document.querySelectorAll("#esquerda button")]
+    //  .find(b => JSON.parse(b.dataset.word)[ladoEsquerdo] === palavra[ladoEsquerdo]);
+    //if (correspondenteEsq) substituirBotao(correspondenteEsq, ladoEsquerdo);
+    //
+    //embaralharDireita();
+    //embaralharEsquerda();
   }
   atualizarPontuacao();
-  selecionadaEsquerda = null;
+  
+  inativarBotao(botao);
+  selecionados.push(botao);
+  if(selecionados.length == qtdeBotoes)
+  {
+      substituirTodos();
+  }
+  //selecionadaEsquerda = null;
+}
+
+function inativarBotao(botao){
+    botao.disabled = true
+}
+function ativarBotao(botao){
+    botao.disabled = false
+}
+
+function substituirTodos(){    
+    debugger;
+    let esquerda = document.getElementById('esquerda');
+    selecionados.forEach(function(b, i)
+    {
+        ativarBotao(b);    
+        substituirPar(esquerda.childNodes[i], b);
+    });
+    embaralharDireita();
+    embaralharEsquerda();
+    selecionados = [];
 }
 
 // embaralha os botões da direita
