@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Traduções</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo de Traduções</h1>
+
+    <div>
+        <label for="tempo">Tempo (segundos): </label>
+        <input type="number" id="tempo" value="60">
+        <button id="inverter">Inverter Idiomas</button>
+        <button id="reset">Resetar</button>
+    </div>
+
+    <div id="cronometro">Tempo: 60</div>
+    <div id="pontuacao">Acertos: 0 | Erros: 0</div>
+
+    <div class="container">
+        <div id="esquerda" class="lado"></div>
+        <div id="direita" class="lado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
