@@ -51,8 +51,25 @@ const dados = {
   ]
 };
 
+//let palavras = dados.palavras;
+async function carregarPalavras() {
+    try {
+        const resposta = await fetch('palavras.json');
+        if (!resposta.ok) throw new Error('Arquivo não encontrado');
+        const json = await resposta.json();
+        return json.palavras;
+    } catch (e) {
+        console.warn("Usando fallback de dados locais:", e.message);
+        return dados.palavras;
+    }
+}
+
+carregarPalavras().then(palavras => {
+    console.log("Palavras carregadas:", palavras);
+    // aqui você pode usar as palavras como quiser
+});
+
 let qtdeBotoes = 5;
-let palavras = dados.palavras;
 let ladoEsquerdo = "de";
 let ladoDireito = "pt";
 let selecionadaEsquerda = null;
