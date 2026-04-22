@@ -66,9 +66,10 @@ async function carregarPalavras() {
 
 let palavras;
 carregarPalavras().then(p => {
-    console.log("Palavras carregadas:", p);
+    //console.log("Palavras carregadas:", p);
     // aqui você pode usar as palavras como quiser
     palavras = p;
+    iniciarJogo();
 });
 
 let qtdeBotoes = 5;
@@ -165,7 +166,7 @@ function ativarBotao(botao){
 }
 
 function substituirTodos(){    
-    debugger;
+    //debugger;
     let esquerda = document.getElementById('esquerda');
     selecionados.forEach(function(b, i)
     {
@@ -264,5 +265,3 @@ document.getElementById("inverter").onclick = () => {
   [ladoEsquerdo, ladoDireito] = [ladoDireito, ladoEsquerdo];
   iniciarJogo();
 };
-
-iniciarJogo();
