@@ -64,9 +64,11 @@ async function carregarPalavras() {
     }
 }
 
-carregarPalavras().then(palavras => {
-    console.log("Palavras carregadas:", palavras);
+let palavras;
+carregarPalavras().then(p => {
+    console.log("Palavras carregadas:", p);
     // aqui você pode usar as palavras como quiser
+    palavras = p;
 });
 
 let qtdeBotoes = 5;
