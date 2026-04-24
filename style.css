@@ -4,6 +4,10 @@ body {
     margin: 20px;
 }
 
+input.field {
+    width: 50px;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
