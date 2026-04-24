@@ -362,7 +362,7 @@ const dados = {
             "pt": "fresco"
         },
         {
-            "de": "groB",
+            "de": "groß",
             "pt": "grande"
         },
         {
