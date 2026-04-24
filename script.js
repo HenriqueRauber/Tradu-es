@@ -1,56 +1,3 @@
-// JSON embutido com todas as palavras
-const dados = {
-  "palavras": [
-    { "de": "Satt", "pt": "Satisfeito" },
-    { "de": "Brot", "pt": "pão" },
-    { "de": "das", "pt": "aquele, esse, isto" },
-    { "de": "Kasë", "pt": "queijo" },
-    { "de": "Salat", "pt": "salada" },
-    { "de": "der", "pt": "de, o, ao" },
-    { "de": "frish", "pt": "fresco" },
-    { "de": "Wurst", "pt": "salsicha" },
-    { "de": "lecker", "pt": "saborosa" },
-    { "de": "die", "pt": "os, os quais, as" },
-    { "de": "das Restaurant", "pt": "restaurante" },
-    { "de": "bilig", "pt": "barato" },
-    { "de": "hungrig", "pt": "faminto" },
-    { "de": "gut", "pt": "Boa, bons, bom" },
-    { "de": "ist", "pt": "está, está situado" },
-    { "de": "nett", "pt": "legal" },
-    { "de": "Tochter", "pt": "filha" },
-    { "de": "Sohn", "pt": "filho" },
-    { "de": "Papa", "pt": "papai" },
-    { "de": "Bruder", "pt": "irmao" },
-    { "de": "das ist", "pt": "esta é" },
-    { "de": "Schwester", "pt": "irmã" },
-    { "de": "Mama", "pt": "mãe" },
-    { "de": "mein", "pt": "meu" },
-    { "de": "meine", "pt": "minha" },
-    { "de": "freut mich", "pt": "prazer em conhecer" },
-    { "de": "und du", "pt": "e você" },
-    { "de": "ich", "pt": "eu" },
-    { "de": "bin", "pt": "sou" },
-    { "de": "tshüss", "pt": "tchau" },
-    { "de": "und", "pt": "e" },
-    { "de": "kekse", "pt": "biscoito" },
-    { "de": "Wasser", "pt": "água" },
-    { "de": "danke", "pt": "obrigado" },
-    { "de": "mit", "pt": "com" },
-    { "de": "Milch", "pt": "leite" },
-    { "de": "Zucker", "pt": "açucar" },
-    { "de": "hallo", "pt": "oi" },
-    { "de": "oder", "pt": "ou" },
-    { "de": "bitte", "pt": "por favor" },
-    { "de": "Kaffe", "pt": "café" },
-    { "de": "Tee", "pt": "chá" },
-    { "de": "schön", "pt": "bonito" },
-    { "de": "groB", "pt": "grande" },
-    { "de": "alt", "pt": "velho, antigo" },
-    { "de": "Stadt", "pt": "cidade" }
-
-  ]
-};
-
 //let palavras = dados.palavras;
 async function carregarPalavras() {
     try {
@@ -66,7 +13,7 @@ async function carregarPalavras() {
 
 let palavras;
 carregarPalavras().then(p => {
-    //console.log("Palavras carregadas:", p);
+    console.log("Palavras carregadas:", p);
     // aqui você pode usar as palavras como quiser
     palavras = p;
     iniciarJogo();
@@ -80,97 +27,118 @@ let acertos = 0, erros = 0;
 let tempoRestante = 60;
 let intervalo = null;
 let selecionados = [];
+let mostrarPort = true;
 
 function iniciarJogo() {
-  acertos = 0;
-  erros = 0;
-  atualizarPontuacao();
-  tempoRestante = parseInt(document.getElementById("tempo").value);
-  qtdeBotoes = parseInt(document.getElementById("palavras").value);
-  document.getElementById("cronometro").textContent = "Tempo: " + tempoRestante;
 
-  const escolhidas = palavras.sort(() => 0.5 - Math.random()).slice(0, qtdeBotoes);
+    acertos = 0;
+    erros = 0;
+    atualizarPontuacao();
+    tempoRestante = parseInt(document.getElementById("tempo").value);
+    qtdeBotoes = parseInt(document.getElementById("palavras").value);
+    document.getElementById("cronometro").textContent = "Tempo: " + tempoRestante;
 
-  const esquerdaDiv = document.getElementById("esquerda");
-  const direitaDiv = document.getElementById("direita");
-  esquerdaDiv.innerHTML = "";
-  direitaDiv.innerHTML = "";
+    const escolhidas = palavras.sort(() => 0.5 - Math.random()).slice(0, qtdeBotoes);
 
-  escolhidas.forEach(p => {
-    const btnEsq = document.createElement("button");
-    btnEsq.textContent = p[ladoEsquerdo];
-    btnEsq.dataset.word = JSON.stringify(p);
-    btnEsq.onclick = () => selecionarEsquerda(btnEsq, p);
-    esquerdaDiv.appendChild(btnEsq);
-  });
+    const esquerdaDiv = document.getElementById("esquerda");
+    const direitaDiv = document.getElementById("direita");
+    esquerdaDiv.innerHTML = "";
+    direitaDiv.innerHTML = "";
 
-  const direitaPalavras = [...escolhidas].sort(() => 0.5 - Math.random());
-  direitaPalavras.forEach(p => {
-    const btnDir = document.createElement("button");
-    btnDir.textContent = p[ladoDireito];
-    btnDir.dataset.word = JSON.stringify(p);
-    btnDir.onclick = () => selecionarDireita(btnDir, p);
-    direitaDiv.appendChild(btnDir);
-  });
+    escolhidas.forEach(p => {
+        const btnEsq = document.createElement("button");
+        //debugger;
+        if (!mostrarPort && ladoEsquerdo == 'pt') {
+            btnEsq.textContent = '-';
+        }
+        else {
+            btnEsq.textContent = p[ladoEsquerdo];
+        }
+        btnEsq.dataset.word = JSON.stringify(p);
+        btnEsq.onclick = () => selecionarEsquerda(btnEsq, p);
+        esquerdaDiv.appendChild(btnEsq);
+    });
+
+    const direitaPalavras = [...escolhidas].sort(() => 0.5 - Math.random());
+    direitaPalavras.forEach(p => {
+        const btnDir = document.createElement("button");
+        //if (!mostrarPort && ladoDireito == 'pt') {
+        //      btnDir.textContent = '-';
+        //}
+        //else {
+        btnDir.textContent = p[ladoDireito];
+        //}
+        btnDir.dataset.word = JSON.stringify(p);
+        btnDir.onclick = () => selecionarDireita(btnDir, p);
+        direitaDiv.appendChild(btnDir);
+    });
 }
 
 function selecionarEsquerda(botao, palavra) {
-  if (!intervalo) iniciarCronometro();
-  document.querySelectorAll("#esquerda button").forEach(b => b.style.backgroundColor = "");
-  botao.style.backgroundColor = "lightblue";
-  selecionadaEsquerda = { botao, palavra };
+    if (!intervalo) iniciarCronometro();
+    document.querySelectorAll("#esquerda button").forEach(b => b.style.backgroundColor = "");
+    botao.style.backgroundColor = "lightblue";
+    selecionadaEsquerda = { botao, palavra };
+
+    if (botao.textContent == palavra.de) {
+        falar(palavra.de, "de-DE");
+    }
+    if (botao.textContent == '-') {
+        falar(palavra.de, "de-DE");
+    }
+    //else { 
+    //    falar(palavra.pt, "pt-BR");
+    //}
 }
 
 function selecionarDireita(botao, palavra) {
-  if (!selecionadaEsquerda) return;
+    if (!selecionadaEsquerda) return;
 
-  if (palavra === selecionadaEsquerda.palavra) {
-    botao.style.backgroundColor = "lightgreen";
-    acertos++;
-    //substituirPar(selecionadaEsquerda.botao, botao);
-    //embaralharDireita();
-    //embaralharEsquerda();
-  } else {
-    botao.style.backgroundColor = "red";
-    erros++;
-    //substituirBotao(selecionadaEsquerda.botao, ladoEsquerdo);
-    //substituirBotao(botao, ladoDireito);
+    if (palavra === selecionadaEsquerda.palavra) {
+        botao.style.backgroundColor = "lightgreen";
+        acertos++;
+        //substituirPar(selecionadaEsquerda.botao, botao);
+        //embaralharDireita();
+        //embaralharEsquerda();
+    } else {
+        botao.style.backgroundColor = "red";
+        erros++;
+        //substituirBotao(selecionadaEsquerda.botao, ladoEsquerdo);
+        //substituirBotao(botao, ladoDireito);
 
-    //const corretaDireita = [...document.querySelectorAll("#direita button")]
-    //  .find(b => JSON.parse(b.dataset.word)[ladoDireito] === selecionadaEsquerda.palavra[ladoDireito]);
-    //if (corretaDireita) substituirBotao(corretaDireita, ladoDireito);
-    //
-    //const correspondenteEsq = [...document.querySelectorAll("#esquerda button")]
-    //  .find(b => JSON.parse(b.dataset.word)[ladoEsquerdo] === palavra[ladoEsquerdo]);
-    //if (correspondenteEsq) substituirBotao(correspondenteEsq, ladoEsquerdo);
-    //
-    //embaralharDireita();
-    //embaralharEsquerda();
-  }
-  atualizarPontuacao();
-  
-  inativarBotao(botao);
-  selecionados.push(botao);
-  if(selecionados.length == qtdeBotoes)
-  {
-      substituirTodos();
-  }
-  //selecionadaEsquerda = null;
+        //const corretaDireita = [...document.querySelectorAll("#direita button")]
+        //  .find(b => JSON.parse(b.dataset.word)[ladoDireito] === selecionadaEsquerda.palavra[ladoDireito]);
+        //if (corretaDireita) substituirBotao(corretaDireita, ladoDireito);
+        //
+        //const correspondenteEsq = [...document.querySelectorAll("#esquerda button")]
+        //  .find(b => JSON.parse(b.dataset.word)[ladoEsquerdo] === palavra[ladoEsquerdo]);
+        //if (correspondenteEsq) substituirBotao(correspondenteEsq, ladoEsquerdo);
+        //
+        //embaralharDireita();
+        //embaralharEsquerda();
+    }
+    atualizarPontuacao();
+
+    inativarBotao(botao);
+    selecionados.push(botao);
+    if (selecionados.length == qtdeBotoes) {
+        substituirTodos();
+    }
+    //selecionadaEsquerda = null;
 }
 
-function inativarBotao(botao){
+function inativarBotao(botao) {
     botao.disabled = true
 }
-function ativarBotao(botao){
+function ativarBotao(botao) {
     botao.disabled = false
 }
 
-function substituirTodos(){    
-    //debugger;
+function substituirTodos() {
+    debugger;
     let esquerda = document.getElementById('esquerda');
-    selecionados.forEach(function(b, i)
-    {
-        ativarBotao(b);    
+    selecionados.forEach(function (b, i) {
+        ativarBotao(b);
         substituirPar(esquerda.childNodes[i], b);
     });
     embaralharDireita();
@@ -180,88 +148,406 @@ function substituirTodos(){
 
 // embaralha os botões da direita
 function embaralharDireita() {
-  const direitaDiv = document.getElementById("direita");
-  const botoes = Array.from(direitaDiv.children);
-  botoes.sort(() => Math.random() - 0.5);
-  direitaDiv.innerHTML = "";
-  botoes.forEach(b => direitaDiv.appendChild(b));
+    const direitaDiv = document.getElementById("direita");
+    const botoes = Array.from(direitaDiv.children);
+    botoes.sort(() => Math.random() - 0.5);
+    direitaDiv.innerHTML = "";
+    botoes.forEach(b => direitaDiv.appendChild(b));
 }
 
 // embaralha os botões da esquerda
 function embaralharEsquerda() {
-  const esquerdaDiv = document.getElementById("esquerda");
-  const botoes = Array.from(esquerdaDiv.children);
-  botoes.sort(() => Math.random() - 0.5);
-  esquerdaDiv.innerHTML = "";
-  botoes.forEach(b => esquerdaDiv.appendChild(b));
+    const esquerdaDiv = document.getElementById("esquerda");
+    const botoes = Array.from(esquerdaDiv.children);
+    botoes.sort(() => Math.random() - 0.5);
+    esquerdaDiv.innerHTML = "";
+    botoes.forEach(b => esquerdaDiv.appendChild(b));
 }
 
 
 function substituirPar(botaoEsq, botaoDir) {
-  const nova = escolherNovaPalavra();
-  atualizarBotao(botaoEsq, nova, ladoEsquerdo);
-  atualizarBotao(botaoDir, nova, ladoDireito);
+    const nova = escolherNovaPalavra();
+    atualizarBotao(botaoEsq, nova, ladoEsquerdo);
+    atualizarBotao(botaoDir, nova, ladoDireito);
 }
 
 function substituirBotao(botao, lado) {
-  const nova = escolherNovaPalavra();
-  atualizarBotao(botao, nova, lado);
+    const nova = escolherNovaPalavra();
+    atualizarBotao(botao, nova, lado);
 }
 
 function atualizarBotao(botao, palavra, lado) {
-  botao.textContent = palavra[lado];
-  botao.dataset.word = JSON.stringify(palavra);
-  botao.style.backgroundColor = "";
-  botao.onclick = () => {
-    if (lado === ladoEsquerdo) {
-      selecionarEsquerda(botao, palavra);
-    } else {
-      selecionarDireita(botao, palavra);
+    debugger;
+    if (!mostrarPort && botao.parentNode.id == 'esquerda' && lado == 'pt') {
+        botao.textContent = '-';
     }
-  };
+    else {
+        botao.textContent = palavra[lado];
+    }
+    botao.dataset.word = JSON.stringify(palavra);
+    botao.style.backgroundColor = "";
+    botao.onclick = () => {
+        if (lado === ladoEsquerdo) {
+            selecionarEsquerda(botao, palavra);
+        } else {
+            selecionarDireita(botao, palavra);
+        }
+    };
 }
 
 // escolhe palavra que não esteja já visível
 function escolherNovaPalavra() {
-  const visiveis = [
-    ...document.querySelectorAll("#esquerda button"),
-    ...document.querySelectorAll("#direita button")
-  ].map(b => JSON.parse(b.dataset.word).de);
-  let candidatos = palavras.filter(p => !visiveis.includes(p.de));
-  if (candidatos.length === 0) candidatos = palavras; // fallback
-  return candidatos[Math.floor(Math.random() * candidatos.length)];
+    const visiveis = [
+        ...document.querySelectorAll("#esquerda button"),
+        ...document.querySelectorAll("#direita button")
+    ].map(b => JSON.parse(b.dataset.word).de);
+    let candidatos = palavras.filter(p => !visiveis.includes(p.de));
+    if (candidatos.length === 0) candidatos = palavras; // fallback
+    return candidatos[Math.floor(Math.random() * candidatos.length)];
 }
 
 function embaralharDireita() {
-  const direitaDiv = document.getElementById("direita");
-  const botoes = Array.from(direitaDiv.children);
-  botoes.sort(() => Math.random() - 0.5);
-  direitaDiv.innerHTML = "";
-  botoes.forEach(b => direitaDiv.appendChild(b));
+    const direitaDiv = document.getElementById("direita");
+    const botoes = Array.from(direitaDiv.children);
+    botoes.sort(() => Math.random() - 0.5);
+    direitaDiv.innerHTML = "";
+    botoes.forEach(b => direitaDiv.appendChild(b));
 }
 
 function atualizarPontuacao() {
-  document.getElementById("pontuacao").textContent = `Acertos: ${acertos} | Erros: ${erros}`;
+    document.getElementById("pontuacao").textContent = `Acertos: ${acertos} | Erros: ${erros}`;
 }
 
 function iniciarCronometro() {
-  intervalo = setInterval(() => {
-    tempoRestante--;
-    document.getElementById("cronometro").textContent = "Tempo: " + tempoRestante;
-    if (tempoRestante <= 0) {
-      clearInterval(intervalo);
-      alert("Tempo esgotado! Acertos: " + acertos + " | Erros: " + erros);
-    }
-  }, 1000);
+    intervalo = setInterval(() => {
+        tempoRestante--;
+        document.getElementById("cronometro").textContent = "Tempo: " + tempoRestante;
+        if (tempoRestante <= 0) {
+            clearInterval(intervalo);
+            alert("Tempo esgotado! Acertos: " + acertos + " | Erros: " + erros);
+        }
+    }, 1000);
 }
 
 document.getElementById("reset").onclick = () => {
-  clearInterval(intervalo);
-  intervalo = null;
-  iniciarJogo();
+    clearInterval(intervalo);
+    intervalo = null;
+    iniciarJogo();
 };
 
 document.getElementById("inverter").onclick = () => {
-  [ladoEsquerdo, ladoDireito] = [ladoDireito, ladoEsquerdo];
-  iniciarJogo();
+    [ladoEsquerdo, ladoDireito] = [ladoDireito, ladoEsquerdo];
+    iniciarJogo();
+};
+
+document.getElementById("hidePT").onclick = () => {
+    if (mostrarPort) {
+        mostrarPort = false;
+        document.getElementById("hidePT").textContent = "Mostrar Port";
+    } else {
+        mostrarPort = true;
+        document.getElementById("hidePT").textContent = "Esconder Port";
+    }
+
+    clearInterval(intervalo);
+    intervalo = null;
+    iniciarJogo();
+
+};
+
+
+function falar(texto, idiom) {
+    const utterance = new SpeechSynthesisUtterance(texto);
+    utterance.lang = idiom;// "de-DE"; // Alemão (Alemanha)
+    speechSynthesis.speak(utterance);
+}
+
+// JSON embutido com todas as palavras
+const dados = {
+    "palavras": [
+        {
+            "de": "alt",
+            "pt": "velho, antigo"
+        },
+        {
+            "de": "Bahnhof",
+            "pt": "estação de trem"
+        },
+        {
+            "de": "Bäcker",
+            "pt": "padeiro"
+        },
+        {
+            "de": "Bäckerin",
+            "pt": "padeira"
+        },
+        {
+            "de": "Bäckerei",
+            "pt": "padaria"
+        },
+        {
+            "de": "Bibliothek",
+            "pt": "biblioteca"
+        },
+        {
+            "de": "bin",
+            "pt": "sou"
+        },
+        {
+            "de": "bitte",
+            "pt": "por favor"
+        },
+        {
+            "de": "Brot",
+            "pt": "pão"
+        },
+        {
+            "de": "Bruder",
+            "pt": "irmao"
+        },
+        {
+            "de": "Café",
+            "pt": "cafeteria"
+        },
+        {
+            "de": "bilig",
+            "pt": "barato"
+        },
+        {
+            "de": "da drüben",
+            "pt": "ali"
+        },
+        {
+            "de": "danke",
+            "pt": "obrigado"
+        },
+        {
+            "de": "dein",
+            "pt": "seu"
+        },
+        {
+            "de": "das",
+            "pt": "aquele"
+        },
+        {
+            "de": "das ist",
+            "pt": "esta é"
+        },
+        {
+            "de": "das Restaurant",
+            "pt": "restaurante"
+        },
+        {
+            "de": "der",
+            "pt": "o"
+        },
+        {
+            "de": "die",
+            "pt": "os"
+        },
+        {
+            "de": "er",
+            "pt": "ele"
+        },
+        {
+            "de": "freut mich",
+            "pt": "prazer em conhecer"
+        },
+        {
+            "de": "Frau",
+            "pt": "esposa"
+        },
+        {
+            "de": "frish",
+            "pt": "fresco"
+        },
+        {
+            "de": "groB",
+            "pt": "grande"
+        },
+        {
+            "de": "gut",
+            "pt": "bom"
+        },
+        {
+            "de": "hallo",
+            "pt": "oi"
+        },
+        {
+            "de": "hier",
+            "pt": "aqui"
+        },
+        {
+            "de": "hotel",
+            "pt": "hotel"
+        },
+        {
+            "de": "hungrig",
+            "pt": "faminto"
+        },
+        {
+            "de": "ich",
+            "pt": "eu"
+        },
+        {
+            "de": "ist",
+            "pt": "está, está situado"
+        },
+        {
+            "de": "Ja",
+            "pt": "Sim"
+        },
+        {
+            "de": "Kaffe",
+            "pt": "café"
+        },
+        {
+            "de": "Kasë",
+            "pt": "queijo"
+        },
+        {
+            "de": "kekse",
+            "pt": "biscoito"
+        },
+        {
+            "de": "klein",
+            "pt": "pequeno"
+        },
+        {
+            "de": "Lehrer",
+            "pt": "professor"
+        },
+        {
+            "de": "Lehrerin",
+            "pt": "professora"
+        },
+        {
+            "de": "lecker",
+            "pt": "saborosa"
+        },
+        {
+            "de": "links",
+            "pt": "esquerda"
+        },
+        {
+            "de": "Mama",
+            "pt": "mãe"
+        },
+        {
+            "de": "mann",
+            "pt": "marido"
+        },
+        {
+            "de": "mein",
+            "pt": "meu"
+        },
+        {
+            "de": "meine",
+            "pt": "minha"
+        },
+        {
+            "de": "nein",
+            "pt": "não"
+        },
+        {
+            "de": "Milch",
+            "pt": "leite"
+        },
+        {
+            "de": "mit",
+            "pt": "com"
+        },
+        {
+            "de": "nett",
+            "pt": "legal"
+        },
+        {
+            "de": "oder",
+            "pt": "ou"
+        },
+        {
+            "de": "Papa",
+            "pt": "papai"
+        },
+        {
+            "de": "Park",
+            "pt": "parque"
+        },
+        {
+            "de": "Rechts",
+            "pt": "direita"
+        },
+        {
+            "de": "Salat",
+            "pt": "salada"
+        },
+        {
+            "de": "Satt",
+            "pt": "Satisfeito"
+        },
+        {
+            "de": "schön",
+            "pt": "bonito"
+        },
+        {
+            "de": "Schwester",
+            "pt": "irmã"
+        },
+        {
+            "de": "Sohn",
+            "pt": "filho"
+        },
+        {
+            "de": "Stadt",
+            "pt": "cidade"
+        },
+        {
+            "de": "Stadt",
+            "pt": "cidade"
+        },
+        {
+            "de": "Tee",
+            "pt": "chá"
+        },
+        {
+            "de": "Tochter",
+            "pt": "filha"
+        },
+        {
+            "de": "tshüss",
+            "pt": "tchau"
+        },
+        {
+            "de": "U-Bahn",
+            "pt": "metrô"
+        },
+        {
+            "de": "und",
+            "pt": "e"
+        },
+        {
+            "de": "und du",
+            "pt": "e você"
+        },
+        {
+            "de": "Verkäufer",
+            "pt": "vendedor"
+        },
+        {
+            "de": "Wasser",
+            "pt": "água"
+        },
+        {
+            "de": "wo ist",
+            "pt": "onde está"
+        },
+        {
+            "de": "Wurst",
+            "pt": "salsicha"
+        },
+        {
+            "de": "Zucker",
+            "pt": "açucar"
+        }
+    ]
 };
