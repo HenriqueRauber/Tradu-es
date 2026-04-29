@@ -2,7 +2,11 @@
   "palavras": [
     {
       "de": "alt",
-      "pt": "velho, antigo"
+      "pt": "velho"
+    },
+    {
+      "de": "Arbeit",
+      "pt": "trabalho"
     },
     {
       "de": "Bahnhof",
@@ -45,7 +49,7 @@
       "pt": "cafeteria"
     },
     {
-      "de": "bilig",
+      "de": "billig",
       "pt": "barato"
     },
     {
@@ -61,8 +65,8 @@
       "pt": "seu"
     },
     {
-      "de": "das",
-      "pt": "aquele"
+      "de": "deine",
+      "pt": "sua"
     },
     {
       "de": "das ist",
@@ -73,16 +77,32 @@
       "pt": "restaurante"
     },
     {
+      "de": "das",
+      "pt": "o/a"
+    },
+    {
       "de": "der",
-      "pt": "o"
+      "pt": "o/a"
     },
     {
       "de": "die",
-      "pt": "os"
+      "pt": "os/as"
     },
     {
       "de": "er",
       "pt": "ele"
+    },
+    {
+      "de": "ein",
+      "pt": "um"
+    },
+    {
+      "de": "eine",
+      "pt": "uma"
+    },
+    {
+      "de": "für",
+      "pt": "para"
     },
     {
       "de": "freut mich",
@@ -93,7 +113,7 @@
       "pt": "esposa"
     },
     {
-      "de": "frish",
+      "de": "frisch",
       "pt": "fresco"
     },
     {
@@ -126,27 +146,39 @@
     },
     {
       "de": "ist",
-      "pt": "está, está situado"
+      "pt": "é/está"
     },
     {
       "de": "Ja",
       "pt": "Sim"
     },
     {
-      "de": "Kaffe",
+      "de": "Kaffee",
       "pt": "café"
     },
     {
-      "de": "Kasë",
+      "de": "Käse",
       "pt": "queijo"
+    },
+    {
+      "de": "kasse",
+      "pt": "caixa (para pagamento)"
     },
     {
       "de": "kekse",
       "pt": "biscoito"
     },
     {
+      "de": "keine Ahnung",
+      "pt": "Não faço ideia"
+    },
+    {
       "de": "klein",
       "pt": "pequeno"
+    },
+    {
+      "de": "kein",
+      "pt": "nenhum"
     },
     {
       "de": "Lehrer",
@@ -158,7 +190,7 @@
     },
     {
       "de": "lecker",
-      "pt": "saborosa"
+      "pt": "saboroso"
     },
     {
       "de": "links",
@@ -185,12 +217,20 @@
       "pt": "não"
     },
     {
+      "de": "neue",
+      "pt": "novo"
+    },
+    {
       "de": "Milch",
       "pt": "leite"
     },
     {
       "de": "mit",
       "pt": "com"
+    },
+    {
+      "de": "möchte",
+      "pt": "quero"
     },
     {
       "de": "nett",
@@ -209,6 +249,10 @@
       "pt": "parque"
     },
     {
+      "de": "perfekt",
+      "pt": "perfeito"
+    },
+    {
       "de": "Rechts",
       "pt": "direita"
     },
@@ -221,6 +265,10 @@
       "pt": "Satisfeito"
     },
     {
+      "de": "sehr",
+      "pt": "muito"
+    },
+    {
       "de": "schön",
       "pt": "bonito"
     },
@@ -229,8 +277,16 @@
       "pt": "irmã"
     },
     {
+      "de": "sie",
+      "pt": "você"
+    },
+    {
       "de": "Sohn",
       "pt": "filho"
+    },
+    {
+      "de": "sprechen",
+      "pt": "falar"
     },
     {
       "de": "Stadt",
@@ -247,6 +303,10 @@
     {
       "de": "Tochter",
       "pt": "filha"
+    },
+    {
+      "de": "trinkt",
+      "pt": "beber"
     },
     {
       "de": "tshüss",
@@ -267,6 +327,10 @@
     {
       "de": "Verkäufer",
       "pt": "vendedor"
+    },
+    {
+      "de": "Verkäuferin",
+      "pt": "vendedora"
     },
     {
       "de": "Wasser",
