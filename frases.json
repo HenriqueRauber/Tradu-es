@@ -1,0 +1,404 @@
+{
+  "frases": [
+    {
+      "de": "Das Brot ist lecker.",
+      "pt": "O pão é gostoso."
+    },
+    {
+      "de": "Die Stadt ist groß.",
+      "pt": "A cidade é grande."
+    },
+    {
+      "de": "Mein Bruder ist nett.",
+      "pt": "Meu irmão é legal."
+    },
+    {
+      "de": "Ich bin hungrig.",
+      "pt": "Eu estou com fome."
+    },
+    {
+      "de": "Das Hotel ist schön.",
+      "pt": "O hotel é bonito."
+    },
+    {
+      "de": "Die Schwester ist klein.",
+      "pt": "A irmã é pequena."
+    },
+    {
+      "de": "Der Lehrer ist alt.",
+      "pt": "O professor é velho."
+    },
+    {
+      "de": "Ich trinke Milch.",
+      "pt": "Eu bebo leite."
+    },
+    {
+      "de": "Wo ist der Bahnhof?",
+      "pt": "Onde está a estação de trem?"
+    },
+    {
+      "de": "Die Mama ist im Park.",
+      "pt": "A mamãe está no parque."
+    },
+    {
+      "de": "Papa ist sehr nett.",
+      "pt": "O papai é muito legal."
+    },
+    {
+      "de": "Das Wasser ist frisch.",
+      "pt": "A água está fresca."
+    },
+    {
+      "de": "Ich esse Käse.",
+      "pt": "Eu como queijo."
+    },
+    {
+      "de": "Die Tochter ist schön.",
+      "pt": "A filha é bonita."
+    },
+    {
+      "de": "Der Sohn ist klein.",
+      "pt": "O filho é pequeno."
+    },
+    {
+      "de": "Ich möchte Tee.",
+      "pt": "Eu quero chá."
+    },
+    {
+      "de": "Das Café ist groß.",
+      "pt": "A cafeteria é grande."
+    },
+    {
+      "de": "Die Kekse sind lecker.",
+      "pt": "Os biscoitos são gostosos."
+    },
+    {
+      "de": "Die Stadt ist sehr schön.",
+      "pt": "A cidade é muito bonita."
+    },
+    {
+      "de": "Das Hotel ist sehr groß.",
+      "pt": "O hotel é muito grande."
+    },
+    {
+      "de": "Ich bin sehr hungrig.",
+      "pt": "Eu estou com muita fome."
+    },
+    {
+      "de": "Der Verkäufer ist im Restaurant.",
+      "pt": "O vendedor está no restaurante."
+    },
+    {
+      "de": "Die Bibliothek ist klein.",
+      "pt": "A biblioteca é pequena."
+    },
+    {
+      "de": "Das Brot ist frisch.",
+      "pt": "O pão está fresco."
+    },
+    {
+      "de": "Die Schwester ist sehr nett.",
+      "pt": "A irmã é muito legal."
+    },
+    {
+      "de": "Mein Bruder ist alt.",
+      "pt": "Meu irmão é velho."
+    },
+    {
+      "de": "Ich trinke Wasser.",
+      "pt": "Eu bebo água."
+    },
+    {
+      "de": "Die Mama ist schön.",
+      "pt": "A mamãe é bonita."
+    },
+    {
+      "de": "Papa ist groß.",
+      "pt": "O papai é grande."
+    },
+    {
+      "de": "Das Hotel ist billig.",
+      "pt": "O hotel é barato."
+    },
+    {
+      "de": "Die Stadt ist teuer.",
+      "pt": "A cidade é cara."
+    },
+    {
+      "de": "Ich esse Wurst.",
+      "pt": "Eu como salsicha."
+    },
+    {
+      "de": "Die Tochter ist sehr klein.",
+      "pt": "A filha é muito pequena."
+    },
+    {
+      "de": "Der Sohn ist sehr groß.",
+      "pt": "O filho é muito grande."
+    },
+    {
+      "de": "Ich möchte Zucker.",
+      "pt": "Eu quero açúcar."
+    },
+    {
+      "de": "Das Café ist schön.",
+      "pt": "A cafeteria é bonita."
+    },
+    {
+      "de": "Die Kekse sind süß.",
+      "pt": "Os biscoitos são doces."
+    },
+    {
+      "de": "Die Bibliothek ist groß.",
+      "pt": "A biblioteca é grande."
+    },
+    {
+      "de": "Das Brot ist alt.",
+      "pt": "O pão está velho."
+    },
+    {
+      "de": "Die Schwester ist jung.",
+      "pt": "A irmã é jovem."
+    },
+    {
+      "de": "Mein Bruder ist stark.",
+      "pt": "Meu irmão é forte."
+    },
+    {
+      "de": "Ich trinke Kaffee.",
+      "pt": "Eu bebo café."
+    },
+    {
+      "de": "Die Mama ist nett.",
+      "pt": "A mamãe é legal."
+    },
+    {
+      "de": "Papa ist sehr alt.",
+      "pt": "O papai é muito velho."
+    },
+    {
+      "de": "Das Hotel ist teuer.",
+      "pt": "O hotel é caro."
+    },
+    {
+      "de": "Die Stadt ist sehr alt.",
+      "pt": "A cidade é muito antiga."
+    },
+    {
+      "de": "Ich esse Salat.",
+      "pt": "Eu como salada."
+    },
+    {
+      "de": "Die Tochter ist sehr schön.",
+      "pt": "A filha é muito bonita."
+    },
+    {
+      "de": "Der Sohn ist sehr nett.",
+      "pt": "O filho é muito legal."
+    },
+    {
+      "de": "Ich möchte Brot und Käse.",
+      "pt": "Eu quero pão e queijo."
+    },
+    {
+      "de": "Das Wasser ist kalt.",
+      "pt": "A água está fria."
+    },
+    {
+      "de": "Die Stadt ist jung.",
+      "pt": "A cidade é jovem."
+    },
+    {
+      "de": "Mein Bruder ist stark.",
+      "pt": "Meu irmão é forte."
+    },
+    {
+      "de": "Ich esse Zucker.",
+      "pt": "Eu como açúcar."
+    },
+    {
+      "de": "Die Schwester ist alt.",
+      "pt": "A irmã é velha."
+    },
+    {
+      "de": "Das Hotel ist neu.",
+      "pt": "O hotel é novo."
+    },
+    {
+      "de": "Die Bibliothek ist ruhig.",
+      "pt": "A biblioteca é tranquila."
+    },
+    {
+      "de": "Ich möchte Milch und Kekse.",
+      "pt": "Eu quero leite e biscoitos."
+    },
+    {
+      "de": "Papa ist sehr stark.",
+      "pt": "O papai é muito forte."
+    },
+    {
+      "de": "Mama ist sehr schön.",
+      "pt": "A mamãe é muito bonita."
+    },
+    {
+      "de": "Das Brot ist billig.",
+      "pt": "O pão é barato."
+    },
+    {
+      "de": "Die Stadt ist sehr teuer.",
+      "pt": "A cidade é muito cara."
+    },
+    {
+      "de": "Ich trinke Tee und Wasser.",
+      "pt": "Eu bebo chá e água."
+    },
+    {
+      "de": "Der Verkäufer ist nett.",
+      "pt": "O vendedor é legal."
+    },
+    {
+      "de": "Die Tochter ist jung.",
+      "pt": "A filha é jovem."
+    },
+    {
+      "de": "Der Sohn ist alt.",
+      "pt": "O filho é velho."
+    },
+    {
+      "de": "Das Café ist klein.",
+      "pt": "A cafeteria é pequena."
+    },
+    {
+      "de": "Die Kekse sind alt.",
+      "pt": "Os biscoitos estão velhos."
+    },
+    {
+      "de": "Ich bin satt.",
+      "pt": "Eu estou satisfeito."
+    },
+    {
+      "de": "Das Hotel ist sehr teuer.",
+      "pt": "O hotel é muito caro."
+    },
+    {
+      "de": "Die Stadt ist sehr groß.",
+      "pt": "A cidade é muito grande."
+    },
+    {
+      "de": "Ich esse Brot und Wurst.",
+      "pt": "Eu como pão e salsicha."
+    },
+    {
+      "de": "Die Schwester ist sehr schön.",
+      "pt": "A irmã é muito bonita."
+    },
+    {
+      "de": "Mein Bruder ist sehr jung.",
+      "pt": "Meu irmão é muito jovem."
+    },
+    {
+      "de": "Ich trinke Kaffee und Milch.",
+      "pt": "Eu bebo café e leite."
+    },
+    {
+      "de": "Die Mama ist sehr nett.",
+      "pt": "A mamãe é muito legal."
+    },
+    {
+      "de": "Papa ist sehr groß.",
+      "pt": "O papai é muito grande."
+    },
+    {
+      "de": "Das Wasser ist sehr frisch.",
+      "pt": "A água está muito fresca."
+    },
+    {
+      "de": "Die Tochter ist sehr klein.",
+      "pt": "A filha é muito pequena."
+    },
+    {
+      "de": "Der Sohn ist sehr stark.",
+      "pt": "O filho é muito forte."
+    },
+    {
+      "de": "Ich möchte Tee und Zucker.",
+      "pt": "Eu quero chá e açúcar."
+    },
+    {
+      "de": "Das Café ist sehr schön.",
+      "pt": "A cafeteria é muito bonita."
+    },
+    {
+      "de": "Die Kekse sind sehr süß.",
+      "pt": "Os biscoitos são muito doces."
+    },
+    {
+      "de": "Die Bibliothek ist sehr groß.",
+      "pt": "A biblioteca é muito grande."
+    },
+    {
+      "de": "Das Brot ist sehr alt.",
+      "pt": "O pão está muito velho."
+    },
+    {
+      "de": "Die Schwester ist sehr jung.",
+      "pt": "A irmã é muito jovem."
+    },
+    {
+      "de": "Mein Bruder ist sehr stark.",
+      "pt": "Meu irmão é muito forte."
+    },
+    {
+      "de": "Ich trinke sehr viel Wasser.",
+      "pt": "Eu bebo muita água."
+    },
+    {
+      "de": "Die Mama ist sehr schön.",
+      "pt": "A mamãe é muito bonita."
+    },
+    {
+      "de": "Papa ist sehr nett.",
+      "pt": "O papai é muito legal."
+    },
+    {
+      "de": "Das Hotel ist sehr groß.",
+      "pt": "O hotel é muito grande."
+    },
+    {
+      "de": "Die Stadt ist sehr alt.",
+      "pt": "A cidade é muito antiga."
+    },
+    {
+      "de": "Ich esse sehr viel Käse.",
+      "pt": "Eu como muito queijo."
+    },
+    {
+      "de": "Die Tochter ist sehr schön.",
+      "pt": "A filha é muito bonita."
+    },
+    {
+      "de": "Der Sohn ist sehr nett.",
+      "pt": "O filho é muito legal."
+    },
+    {
+      "de": "Ich möchte sehr viel Brot.",
+      "pt": "Eu quero muito pão."
+    },
+    {
+      "de": "Das Café ist sehr groß.",
+      "pt": "A cafeteria é muito grande."
+    },
+    {
+      "de": "Die Kekse sind sehr lecker.",
+      "pt": "Os biscoitos são muito gostosos."
+    },
+    {
+      "de": "Die Bibliothek ist sehr ruhig.",
+      "pt": "A biblioteca é muito tranquila."
+    },
+    {
+      "de": "Das Wasser ist sehr kalt.",
+      "pt": "A água está muito fria."
+    }
+  ]
+}
