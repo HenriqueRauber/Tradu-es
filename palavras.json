@@ -29,8 +29,16 @@
       "pt": "biblioteca"
     },
     {
+      "de": "billig",
+      "pt": "barato"
+    },
+    {
       "de": "bin",
       "pt": "sou"
+    },
+    {
+      "de": "bist",
+      "pt": "está"
     },
     {
       "de": "bitte",
@@ -49,10 +57,6 @@
       "pt": "cafeteria"
     },
     {
-      "de": "billig",
-      "pt": "barato"
-    },
-    {
       "de": "da drüben",
       "pt": "ali"
     },
@@ -61,12 +65,8 @@
       "pt": "obrigado"
     },
     {
-      "de": "dein",
-      "pt": "seu"
-    },
-    {
-      "de": "deine",
-      "pt": "sua"
+      "de": "das",
+      "pt": "o/a"
     },
     {
       "de": "das ist",
@@ -77,8 +77,12 @@
       "pt": "restaurante"
     },
     {
-      "de": "das",
-      "pt": "o/a"
+      "de": "dein",
+      "pt": "seu"
+    },
+    {
+      "de": "deine",
+      "pt": "sua"
     },
     {
       "de": "der",
@@ -89,10 +93,6 @@
       "pt": "os/as"
     },
     {
-      "de": "er",
-      "pt": "ele"
-    },
-    {
       "de": "ein",
       "pt": "um"
     },
@@ -101,20 +101,24 @@
       "pt": "uma"
     },
     {
-      "de": "für",
-      "pt": "para"
+      "de": "er",
+      "pt": "ele"
     },
     {
       "de": "freut mich",
       "pt": "prazer em conhecer"
     },
     {
-      "de": "Frau",
-      "pt": "esposa"
-    },
-    {
       "de": "frisch",
       "pt": "fresco"
+    },
+    {
+      "de": "für",
+      "pt": "para"
+    },
+    {
+      "de": "gehen",
+      "pt": "andar"
     },
     {
       "de": "groß",
@@ -153,6 +157,10 @@
       "pt": "Sim"
     },
     {
+      "de": "joggen",
+      "pt": "correr"
+    },
+    {
       "de": "Kaffee",
       "pt": "café"
     },
@@ -165,20 +173,24 @@
       "pt": "caixa (para pagamento)"
     },
     {
-      "de": "kekse",
-      "pt": "biscoito"
+      "de": "kein",
+      "pt": "nenhum"
     },
     {
       "de": "keine Ahnung",
       "pt": "Não faço ideia"
     },
     {
+      "de": "kekse",
+      "pt": "biscoito"
+    },
+    {
       "de": "klein",
       "pt": "pequeno"
     },
     {
-      "de": "kein",
-      "pt": "nenhum"
+      "de": "lecker",
+      "pt": "saboroso"
     },
     {
       "de": "Lehrer",
@@ -187,10 +199,6 @@
     {
       "de": "Lehrerin",
       "pt": "professora"
-    },
-    {
-      "de": "lecker",
-      "pt": "saboroso"
     },
     {
       "de": "links",
@@ -213,14 +221,6 @@
       "pt": "minha"
     },
     {
-      "de": "nein",
-      "pt": "não"
-    },
-    {
-      "de": "neue",
-      "pt": "novo"
-    },
-    {
       "de": "Milch",
       "pt": "leite"
     },
@@ -233,8 +233,20 @@
       "pt": "quero"
     },
     {
+      "de": "nein",
+      "pt": "não"
+    },
+    {
+      "de": "neue",
+      "pt": "novo"
+    },
+    {
       "de": "nett",
       "pt": "legal"
+    },
+    {
+      "de": "oft",
+      "pt": "frequentemente"
     },
     {
       "de": "oder",
@@ -265,12 +277,12 @@
       "pt": "Satisfeito"
     },
     {
-      "de": "sehr",
-      "pt": "muito"
-    },
-    {
       "de": "schön",
       "pt": "bonito"
+    },
+    {
+      "de": "schwimmen",
+      "pt": "nadar"
     },
     {
       "de": "Schwester",
@@ -289,8 +301,8 @@
       "pt": "falar"
     },
     {
-      "de": "Stadt",
-      "pt": "cidade"
+      "de": "sportlich",
+      "pt": "esportivo"
     },
     {
       "de": "Stadt",
