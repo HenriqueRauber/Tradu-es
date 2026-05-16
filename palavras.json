@@ -1,6 +1,18 @@
 {
   "palavras": [
     {
+      "de": "Sport",
+      "pt": "esporte"
+    }, 
+    {
+      "de": "spielen",
+      "pt": "brincar"
+    },
+    {
+      "de": "machen",
+      "pt": "fazemos"
+    },
+    {
       "de": "Wie geht´s",
       "pt": "como você está"
     },
@@ -70,7 +82,19 @@
     },
     {
       "de": "joggen",
-      "pt": "correr"
+      "pt": "corrida"
+    },
+    {
+      "de": "Jogger",
+      "pt": "corredor"
+    },
+    {
+      "de": "joggt",
+      "pt": "corre"
+    },
+    {
+      "de": "schwimmt",
+      "pt": "nada"
     },
     {
       "de": "schwimmen",
