@@ -1,9 +1,129 @@
 {
   "palavras": [
     {
+      "de": "müde",
+      "pt": "cansado"
+    },
+    {
+      "de": "Es tut mir leid",
+      "pt": "desculpe-me"
+    },
+    {
+      "de": "Bis später",
+      "pt": "Até mais tarde"
+    },
+    {
+      "de": "Kaufhaus",
+      "pt": "loja de departamentos"
+    },
+    {
+      "de": "einfach",
+      "pt": "fácil"
+    },
+    {
+      "de": "Jetzt",
+      "pt": "agora"
+    },
+    {
+      "de": "komm",
+      "pt": "vem"
+    },
+    {
+      "de": "Schnell",
+      "pt": "rápido"
+    },
+    {
+      "de": "bestellen",
+      "pt": "pedir"
+    },
+    {
+      "de": "möchte",
+      "pt": "gostaria"
+    },
+    {
+      "de": "Wirklich",
+      "pt": "sério",
+      "description": "Tipo está falando sério?"
+    },
+    {
+      "de": "Geld",
+      "pt": "dinheiro"
+    },
+    {
+      "de": "brauche",
+      "pt": "preciso"
+    },
+    {
+      "de": "aufregend",
+      "pt": "emocionante"
+    },
+    {
+      "de": "Frage",
+      "pt": "Pergunta"
+    },
+    {
+      "de": "Fernseher",
+      "pt": "televisão"
+    },
+    {
+      "de": "sind",
+      "pt": "estão"
+    },
+    {
+      "de": "sitzt",
+      "pt": "senta"
+    },
+    {
+      "de": "brauchen",
+      "pt": "precisar",
+      "description": "Necessita"
+    },
+    {
+      "de": "trinken",
+      "pt": "beber"
+    },
+    {
+      "de": "mehr",
+      "pt": "mais"
+    },
+    {
+      "de": "toilette",
+      "pt": "banheiro"
+    },
+    {
+      "de": "Musik",
+      "pt": "núsica"
+    },
+    {
+      "de": "durstig",
+      "pt": "com sede"
+    },
+    {
+      "de": "zu",
+      "pt": "demais",
+      "description": "Tipo 'zu groß' é 'grande demais'"
+    },
+    {
+      "de": "laut",
+      "pt": "alto"
+    },
+    {
+      "de": "sind",
+      "pt": "somos"
+    },
+    {
+      "de": "wir",
+      "pt": "nós"
+    },
+    {
+      "de": "draußen",
+      "pt": "fora",
+      "description": "pode ser entendido como ao ar livre!"
+    },
+    {
       "de": "Sport",
       "pt": "esporte"
-    }, 
+    },
     {
       "de": "spielen",
       "pt": "brincar"
